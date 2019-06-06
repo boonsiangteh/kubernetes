@@ -1,0 +1,13 @@
+# configuration file to define an object in kubernetes
+apiVersion: v1
+kind: Pod
+metadata:
+  name: client-pod
+  labels:
+    component: web
+spec:
+  containers:
+    - name: client
+      image: boonsiangteh/multi-worker
+      ports:
+        - containerPort: 3000
